@@ -2,6 +2,8 @@
 
 Demo: https://mit-invoice-92o1.vercel.app/
 
+Designs are simple and responsive.
+
 
 # SvelteKit
 
