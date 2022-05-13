@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
 </script>
 
 <header>
-	<div class="corner">
+	<div class="corner"
+		 style="visibility: hidden;"
+	>
+
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
 		</a>
@@ -15,13 +18,12 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/template1">Template 1</a></li>
+			<li><a href="/template2">Template 2</a></li>
+			<li><a href="/template3">Template 3</a></li>
+			<li><a href="/template4">Template 4</a></li>
+			<li><a href="/template5">Template 5</a></li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -38,12 +40,10 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
 	.corner {
 		width: 3em;
 		height: 3em;
 	}
-
 	.corner a {
 		display: flex;
 		align-items: center;
@@ -51,29 +51,24 @@
 		width: 100%;
 		height: 100%;
 	}
-
 	.corner img {
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
 	}
-
 	nav {
 		display: flex;
 		justify-content: center;
 		--background: rgba(255, 255, 255, 0.7);
 	}
-
 	svg {
 		width: 2em;
 		height: 3em;
 		display: block;
 	}
-
 	path {
 		fill: var(--background);
 	}
-
 	ul {
 		position: relative;
 		padding: 0;
@@ -86,12 +81,10 @@
 		background: var(--background);
 		background-size: contain;
 	}
-
 	li {
 		position: relative;
 		height: 100%;
 	}
-
 	li.active::before {
 		--size: 6px;
 		content: '';
@@ -103,7 +96,6 @@
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--accent-color);
 	}
-
 	nav a {
 		display: flex;
 		height: 100%;
@@ -117,7 +109,6 @@
 		text-decoration: none;
 		transition: color 0.2s linear;
 	}
-
 	a:hover {
 		color: var(--accent-color);
 	}
