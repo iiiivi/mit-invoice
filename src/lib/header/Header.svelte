@@ -39,6 +39,7 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		
 	}
 	.corner {
 		width: 3em;
@@ -71,6 +72,7 @@
 	}
 	ul {
 		position: relative;
+		flex-wrap: wrap;
 		padding: 0;
 		margin: 0;
 		height: 3em;
